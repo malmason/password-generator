@@ -28,7 +28,9 @@ This project includes starter code to generate a random password based on criter
 2. Created variables to store password length, boolean responses for the 4 prompts, 4 strings to store the allowed characters, a search string built from the 4 options chosen.
 3. Validated passwordLen variable, if criteria failed, alert user and call generatePassword again.
 4. If passwordLen passes validation, use 4 confirm boxes to get a yes no response from the user.
+
    > **Note** I used confirm since javascript doesn't have a built in "Yes/No" prompt.
+   
 5. Used an If construct to build the randomStringToSearch based on the boolean responses.
 6. Looped through the string and assigned a new string based on a random position in the search string and that met the length requested by the user.
 7. Cleared out the variables to allow for a new password to be generated if the user clicked the button again.
