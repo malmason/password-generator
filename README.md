@@ -1,16 +1,16 @@
-# Password Generator
+# Password Generator 🔑
 
 **Employee Random Password Generator**
 
 ---
 
-## Description
+## Description 📓
 
 This project includes starter code to generate a random password based on criteria provided by the user. Currently, the logic to generate the password is missing and need to be added successfully to meet the project goals.
 
 ---
 
-## Criteria
+## Criteria 📃
 
 - Prompt the user for a password length between 8 and 128 characters.
 - Prompt the user for a response to 4 password options to be included.
@@ -22,7 +22,7 @@ This project includes starter code to generate a random password based on criter
 
 ---
 
-## Steps used
+## Steps used 1️⃣
 
 1. Created a generatePassword function since one didn't exist.
 2. Created variables to store password length, boolean responses for the 4 prompts, 4 strings to store the allowed characters, a search string built from the 4 options chosen.
