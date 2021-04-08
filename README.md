@@ -38,7 +38,7 @@ This project includes starter code to generate a random password based on criter
 
 ---
 
-## Screenshots
+## Screenshots 📸
 ![Homepage](/screenshot.JPG)
 
 Final results: [Password Generator](https://malmason.github.io/password-generator/)
