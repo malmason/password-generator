@@ -2,6 +2,7 @@
 // Variable to store the response to the password length. 
 var passwordLen ="";
 
+// Allows the program to quit gracefully and run again if the user presses the Generate password button.
 var userCancelled = false;
 
 // Variables to be searched to create the random password. 
@@ -11,7 +12,7 @@ var randomCaps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var randomLower = "abcdefghijklmnopqrstuvwxyz";
 
 
-
+// Combined search string. 
 var randomStringToSearch = "";
 
 // This will contain the final string to output. 

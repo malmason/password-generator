@@ -38,6 +38,12 @@ This project includes starter code to generate a random password based on criter
 
 ---
 
+## Screenshots
+![Homepage](/screenshot.JPG)
+
+Final results: [Password Generator](https://malmason.github.io/password-generator/)
+
+
 ## Contact 📱
 
 Malcolm Mason - [Github](https://github.com/malmason) Email: [Malcolm](mailto:malmason66@gmail.com) 📧
