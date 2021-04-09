@@ -30,7 +30,7 @@ This project includes starter code to generate a random password based on criter
 4. If passwordLen passes validation, use 4 confirm boxes to get a yes no response from the user.
 
    > **Note** I used confirm since javascript doesn't have a built in "Yes/No" prompt.
-   
+
 5. Used an If construct to build the randomStringToSearch based on the boolean responses.
 6. Looped through the string and assigned a new string based on a random position in the search string and that met the length requested by the user.
 7. Cleared out the variables to allow for a new password to be generated if the user clicked the button again.
@@ -39,10 +39,14 @@ This project includes starter code to generate a random password based on criter
 ---
 
 ## Screenshots 📸
+
 ![Homepage](/screenshot.JPG)
 
-Final results: [Password Generator](https://malmason.github.io/password-generator/)
+![Result](/result.JPG)
 
+---
+
+Final results: [Password Generator](https://malmason.github.io/password-generator/)
 
 ## Contact 📱
 

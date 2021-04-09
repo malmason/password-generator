@@ -1,6 +1,6 @@
 
 // Variable to store the response to the password length. 
-var passwordLen ="";
+var passwordLen = 0;
 
 // Allows the program to quit gracefully and run again if the user presses the Generate password button.
 var userCancelled = false;
@@ -52,8 +52,8 @@ function generatePassword()  {
 
        // The user cancelled so exit. 
        if(!passwordLen) {
-        console.log(userCancelled);
-        passwordLen = "";
+        userCancelled = true;
+        passwordLen = 0;
         randomStringToSearch = "";
         return "";   
       }
@@ -61,8 +61,12 @@ function generatePassword()  {
       if(passwordLen  < 8 || passwordLen > 128) {
         alert("Invalid password length, password must be between 8 and 128 characters!")
         // Clear the variable and call generatePassword again to start over. 
-        passwordLen = "";
+        passwordLen = 0;
+        userCancelled = false;
+        randomStringToSearch = "";
+        randomStringToSearch = "";
         generatePassword();
+        return randomString; // Returned the randomString, this fixes the undefined issue when the function is called a second time. 
 
     } else if(!passwordLen) {
         // The cancel button was clicked, reset the passwordLen variable and exit. 
@@ -83,26 +87,24 @@ function generatePassword()  {
         randomStringToSearch = randomChars;
       }
       if(useNums) {
-        randomStringToSearch = randomStringToSearch  + randomNums;
+        randomStringToSearch += randomNums;
       }
       if(useCaps) {
-        randomStringToSearch = randomStringToSearch  + randomCaps;
+        randomStringToSearch += randomCaps;
       }
       if(useLower) {
-        randomStringToSearch = randomStringToSearch  + randomLower;
+        randomStringToSearch += randomLower;
       }
 
-      console.log(randomStringToSearch)
       searchStringLen = randomStringToSearch.length;
 
       // loop through the string to generate the password.
       randomString = "" // Make sure this string has been reset for subsequent calls for a password.  
       for (var i = 0; i < passwordLen; i++ ) {
-        randomString = randomString + randomStringToSearch[Math.floor(Math.random() * searchStringLen)];
+        randomString += randomStringToSearch[Math.floor(Math.random() * searchStringLen)];
       }
 
-      console.log(randomString.length)
-      passwordLen = "";
+        passwordLen = "";
       return randomString;
 
     }
