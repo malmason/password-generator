@@ -40,6 +40,12 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+function promptUser(){
+  useChars = confirm("Press OK to use special characters in your password\nPress Cancel to not use special characters!");
+  useNums = confirm("Press OK to use numbers in your password\nPress Cancel to not use numbers!");
+  useCaps = confirm("Press OK to use Capital letters in your password\nPress Cancel to not use Caps!");
+  useLower = confirm("Press OK to use Lower case letters in your password\nPress Cancel to not use lower case!");
+}
 
 function generatePassword()  {
   if(passwordLen >= 8 && passwordLen <= 128) {
@@ -76,10 +82,14 @@ function generatePassword()  {
         return "";
 
     } else {
-      useChars = confirm("Press OK to use special characters in your password\nPress Cancel to not use special characters!");
-      useNums = confirm("Press OK to use numbers in your password\nPress Cancel to not use numbers!");
-      useCaps = confirm("Press OK to use Capital letters in your password\nPress Cancel to not use Caps!");
-      useLower = confirm("Press OK to use Lower case letters in your password\nPress Cancel to not use lower case!");
+      // Call the function to prompt the user for their password criteria. 
+      promptUser();
+     
+      // Make sure at least one of the criteria has been chosen by the user, if not call promptUser again. 
+      if(!useChars && !useNums && !useCaps && !useLower) {
+        alert("You must select at least 1 criteria for  your password, try again!")
+        promptUser();
+      }
 
       // Build the random search string. 
      
@@ -104,7 +114,7 @@ function generatePassword()  {
         randomString += randomStringToSearch[Math.floor(Math.random() * searchStringLen)];
       }
 
-        passwordLen = "";
+      passwordLen = "";
       return randomString;
 
     }
